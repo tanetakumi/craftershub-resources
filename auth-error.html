@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認証が必要です</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <style>
+      :root {
+        color: #0f172a;
+        font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        background: #ffffff;
+      }
+      main {
+        max-width: 460px;
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
+      }
+      .brand {
+        margin: 12px 0 32px;
+        font-size: 0.95rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #475467;
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      .site {
+        margin: 0 0 8px;
+        font-size: 0.95rem;
+        color: #475467;
+      }
+      .message {
+        margin: 0 0 20px;
+        font-size: 1rem;
+        color: #1f2937;
+        line-height: 1.6;
+      }
+      a {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main role="alert" aria-live="assertive">
+      <img src="./assets/craftershub-icon-192x192.png" alt="CraftersHub ロゴ" />
+      <p class="brand">CraftersHub</p>
+      <h1>この Web サイトにアクセスするには権限が必要です。</h1>
+      <p class="message">
+        権限がある場合は再度ログインしてください。
+      </p>
+      <p><a href="https://discord.gg/VX6xg9mxfa">問題がある場合は CraftersHub にてお問い合わせください。</a></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>CraftersHub Resources</title>
+    <meta
+      name="description"
+      content="CraftersHub を支えるアイコン、背景、認証エラー画面などの静的アセットをまとめたリソース置き場です。"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color: #0f172a;
+        font-family:
+          "Noto Sans JP",
+          "Hiragino Sans",
+          "Yu Gothic",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #0f172a;
+        color: #0f172a;
+      }
+      main {
+        min-height: 100vh;
+        background: radial-gradient(circle at top right, #e0f2fe, transparent 45%),
+          #0f172a;
+        color: #0f172a;
+      }
+      header {
+        padding: 24px 5vw 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .logo img {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.4);
+      }
+      .logo span {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #f8fafc;
+      }
+      nav {
+        font-size: 0.95rem;
+      }
+      nav a {
+        color: #e0e7ff;
+        margin-left: 18px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        padding: 40px 5vw 80px;
+      }
+      .hero {
+        background: #ffffff;
+        border-radius: 32px;
+        padding: 40px;
+        max-width: 860px;
+        margin: auto;
+        box-shadow: 0 25px 40px rgba(15, 23, 42, 0.25);
+      }
+      .hero h1 {
+        margin: 0 0 16px;
+        font-size: 2.4rem;
+        color: #0f172a;
+      }
+      .hero p {
+        margin: 0 0 24px;
+        line-height: 1.7;
+        color: #475467;
+      }
+      .hero .cta {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 20px;
+        border-radius: 999px;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+      .hero .cta:hover {
+        transform: translateY(-2px);
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: 0 20px 30px rgba(15, 23, 42, 0.15);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        margin: 32px auto 0;
+        max-width: 860px;
+      }
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: #0f172a;
+      }
+      .card p {
+        margin: 0;
+        color: #475467;
+        line-height: 1.6;
+      }
+      .card small {
+        display: inline-block;
+        margin-top: 12px;
+        color: #475467;
+        font-size: 0.9rem;
+      }
+      .card a {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        margin-top: 64px;
+        text-align: center;
+        color: #e2e8f0;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">
+          <img src="./assets/craftershub-icon-512x512.png" alt="CraftersHub ロゴ" />
+          <span>CraftersHub Resources</span>
+        </div>
+        <nav>
+          <a href="#usage">使い方</a>
+          <a href="#contact">Discord</a>
+        </nav>
+      </header>
+      <div class="container">
+        <section class="hero">
+          <h1>クラフターズのためのリソース置き場</h1>
+          <p>
+            このページは CraftersHub の共有静的アセットをまとめたものです。GitHub Pages から背景画像、アイコン、ファビコンなどを相対パスで配信でき、Cloudflare Tunnel の認証で使う `auth-error.html` も同じリポジトリに含まれています。
+          </p>
+          <p>
+            ここにあるファイルだけを GitHub Pages として公開すれば、CraftersHub のリソース配信・認証フォールバックがシンプルに運用できます。
+          </p>
+          <a class="cta" href="#contact">Discord で話す</a>
+        </section>
+
+        <section id="usage" class="card">
+          <h2>使い方とアクセス</h2>
+          <p>
+            `assets/` フォルダ内のバイナリ（例: `./assets/craftershub-icon-192x192.png`）は GitHub Pages または Cloudflare Pages から直接参照できます。Tunnel 認証が必要な場合は `auth-error.html` にアクセスさせるだけで案内が完了します。
+          </p>
+          <small>※ `auth-error.html` は認証に使うだけなので、アクセスできればそれで十分です。</small>
+        </section>
+
+        <section id="contact" class="card">
+          <h2>連絡先</h2>
+          <p>
+            最新情報やサポートは Discord に集約されています。リソースの追加や問題報告も Discord からどうぞ。
+          </p>
+          <small>
+            <a href="https://discord.gg/VX6xg9mxfa">CraftersHub Discord へ</a>
+          </small>
+        </section>
+
+        <footer>
+          CraftersHub Resources • GitHub Pages で公開中
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
